@@ -611,6 +611,9 @@
     "publish:vsce": "vsce publish --no-dependencies",
     "publish:ovsx": "ovsx publish"
   },
+  "prettier": {
+    "semi": false
+  },
   "devDependencies": {
     "@playwright/test": "^1.50.0",
     "@types/mocha": "^10.0.10",
