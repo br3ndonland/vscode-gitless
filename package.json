@@ -612,7 +612,20 @@
     "publish:ovsx": "ovsx publish"
   },
   "prettier": {
-    "semi": false
+    "semi": false,
+    "overrides": [
+      {
+        "files": [
+          "COMMIT_EDITMSG",
+          "TAG_EDITMSG"
+        ],
+        "options": {
+          "parser": "markdown",
+          "printWidth": 72,
+          "proseWrap": "always"
+        }
+      }
+    ]
   },
   "devDependencies": {
     "@playwright/test": "^1.50.0",
