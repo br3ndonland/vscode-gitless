@@ -16,8 +16,8 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
           cache: pnpm
+          node-version-file: .node-version
       - run: pnpm install --frozen-lockfile
       - run: pnpm run lint
       - run: pnpm run build
@@ -31,8 +31,8 @@ jobs:
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
           cache: pnpm
+          node-version-file: .node-version
       - run: pnpm install --frozen-lockfile
       - run: pnpm run build
       - run: npx playwright install --with-deps chromium
