@@ -606,10 +606,16 @@
     "test": "vscode-test",
     "test:e2e": "playwright test --config tests/e2e/playwright.config.ts",
     "lint": "prettier --check .",
+    "lint:commits": "commitlint --from $(git rev-list --max-parents=0 HEAD) --to HEAD",
     "format": "prettier --write .",
     "package": "vsce package --no-dependencies",
     "publish:vsce": "vsce publish --no-dependencies",
     "publish:ovsx": "ovsx publish"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "prettier": {
     "semi": false,
@@ -628,6 +634,8 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.0",
+    "@commitlint/config-conventional": "^20.5.0",
     "@playwright/test": "^1.50.0",
     "@types/mocha": "^10.0.10",
     "@types/node": "^22.15.0",
