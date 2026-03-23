@@ -213,7 +213,7 @@
         {
           "id": "gitlessInspect",
           "title": "GitLess Inspect",
-          "icon": "resources/icons/gitless-inspect.svg"
+          "icon": "images/icons/gitless-inspect.svg"
         }
       ]
     },
