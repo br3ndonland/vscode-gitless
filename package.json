@@ -15,6 +15,7 @@
   "categories": [
     "SCM Providers"
   ],
+  "icon": "images/logo.png",
   "main": "./dist/extension.js",
   "activationEvents": [
     "onStartupFinished"
