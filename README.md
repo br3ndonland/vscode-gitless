@@ -1,6 +1,6 @@
 # GitLess
 
-Git in VSCode without the bloat.
+Git in VSCode with less bloat.
 
 GitLess is a minimal VSCode extension for Git integration. The built-in Git features don't do enough, but other extensions do too much. GitLess provides a focused set of features for everyday Git workflows.
 
