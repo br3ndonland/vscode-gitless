@@ -344,9 +344,14 @@
           "group": "1_copy@1"
         },
         {
-          "command": "gitless.copyMessage",
+          "command": "gitless.copyShortSha",
           "when": "viewItem =~ /gitless:commit\\b/",
           "group": "1_copy@2"
+        },
+        {
+          "command": "gitless.copyMessage",
+          "when": "viewItem =~ /gitless:commit\\b/",
+          "group": "1_copy@3"
         },
         {
           "submenu": "gitless.submenu.share",
