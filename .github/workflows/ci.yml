@@ -64,12 +64,19 @@ jobs:
       - name: Semantic Release (dry run)
         run: |
           unset GITHUB_ACTIONS
-          pnpm exec semantic-release --extends ./release.config.package.mjs --dry-run --no-ci
+          pnpm \
+            --package=@semantic-release/changelog@^6 \
+            --package=@semantic-release/commit-analyzer@^13 \
+            --package=@semantic-release/git@^10 \
+            --package=semantic-release-vsce@^6 \
+            dlx semantic-release@^25 --extends ./release.config.package.mjs --dry-run --no-ci
         env:
           VSCE_PRE_RELEASE: true
 
   release:
-    environment: release
+    environment:
+      name: release
+      deployment: false
     needs: build-and-test
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -90,7 +97,13 @@ jobs:
           node-version-file: .node-version
       - run: pnpm install --frozen-lockfile
       - name: Semantic Release
-        run: pnpm exec semantic-release --extends ./release.config.publish.mjs
+        run: |
+          pnpm \
+            --package=@semantic-release/changelog@^6 \
+            --package=@semantic-release/commit-analyzer@^13 \
+            --package=@semantic-release/git@^10 \
+            --package=semantic-release-vsce@^6 \
+            dlx semantic-release@^25 --extends ./release.config.publish.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GH_FGT }}
           OVSX_PAT: ${{ secrets.OVSX_PAT }}
