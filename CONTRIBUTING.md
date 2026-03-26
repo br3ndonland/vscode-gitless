@@ -141,3 +141,7 @@ Releases are automated via GitHub Actions. To publish a new version:
 2. Update `CHANGELOG.md` with the changes
 3. Create and push a version tag: `git tag 0.1.0 && git push origin 0.1.0`
 4. The publish workflow will build, package, and publish to both the VS Code Marketplace and Open VSX
+
+Note that, even if the VSCode extension is published as a pre-release, the branch and tag name should not include SemVer pre-release specifiers because the Microsoft marketplace does not support them. The [docs](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) explain,
+
+> We only support `major.minor.patch` for extension versions, `semver` pre-release tags are **not supported**. Versions must be different between pre-release and regular releases. That is, if `1.2.3` is uploaded as a pre-release, the next regular release must be uploaded with a distinct version, such as `1.2.4`. Full `semver` support will be available in the future.
