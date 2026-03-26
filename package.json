@@ -1,5 +1,5 @@
 {
-  "name": "vscode-gitless",
+  "name": "gitless",
   "displayName": "GitLess",
   "description": "Git in VSCode with less bloat.",
   "version": "0.1.0",
