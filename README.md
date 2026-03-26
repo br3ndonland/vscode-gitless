@@ -24,12 +24,12 @@ Access these commands from the VSCode command palette (`Ctrl+Shift+P` / `Cmd+Shi
 
 GitLess adds a grouped section to the Source Control panel with toggle buttons to switch between views:
 
-- **Commits** — Browse the commit history with expandable file trees
-- **Branches** — View local and remote branches
-- **Remotes** — Inspect configured remotes and their branches
-- **Stashes** — Manage stashed changes
-- **Tags** — Browse tags and their associated commits
-- **Worktrees** — View and manage Git worktrees
+- **Commits** - Browse the commit history with expandable file trees
+- **Branches** - View local and remote branches
+- **Remotes** - Inspect configured remotes and their branches
+- **Stashes** - Manage stashed changes
+- **Tags** - Browse tags and their associated commits
+- **Worktrees** - View and manage Git worktrees
 
 #### Commit Hover Actions
 
@@ -73,9 +73,9 @@ Right-click on items for additional actions:
 
 The GitLess Inspect sidebar panel provides:
 
-- **File History** — View the commit history of the active file
-- **Line History** — View the commit history of selected lines
-- **Search & Compare** — Search commits by message or compare two refs
+- **File History** - View the commit history of the active file
+- **Line History** - View the commit history of selected lines
+- **Search & Compare** - Search commits by message or compare two refs
 
 ### Remote Provider Support
 
@@ -146,8 +146,8 @@ pnpm run package     # Create .vsix file
 
 The extension is published via GitHub Actions workflows:
 
-- **CI** (`.github/workflows/ci.yml`) — Runs on push and PR to `main`. Lints, builds, and runs unit tests.
-- **Publish** (`.github/workflows/publish.yml`) — Triggered by version tags (`v*.*.*`). Publishes to both the [VS Code Marketplace](https://marketplace.visualstudio.com/) and [Open VSX](https://open-vsx.org/) (for VSCodium and other non-Microsoft distributions).
+- **CI** (`.github/workflows/ci.yml`) - Runs on push and PR to `main`. Lints, builds, and runs unit tests.
+- **Publish** (`.github/workflows/publish.yml`) - Triggered by version tags (`v*.*.*`). Publishes to both the [VS Code Marketplace](https://marketplace.visualstudio.com/) and [Open VSX](https://open-vsx.org/) (for VSCodium and other non-Microsoft distributions).
 
 ## License
 

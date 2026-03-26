@@ -17,12 +17,12 @@ GitLess is a minimal VSCode extension for Git integration. It provides a dedicat
 
 ## Architecture
 
-- **Entry point**: `src/extension.ts` — `activate()` creates a `Container` instance.
-- **DI container**: `src/container.ts` — Wires up the `GitService`, commands, views, and configuration.
-- **Git layer**: `src/git/` — `models.ts` (interfaces), `shell.ts` (subprocess execution), `parsers.ts` (output parsing), `remoteUrls.ts` (URL generation), `gitService.ts` (high-level API).
-- **Commands**: `src/commands/registerCommands.ts` — All command handlers registered in one function. Command IDs defined in `src/constants.ts`.
-- **Views**: `src/views/` — `groupedView.ts` owns a single `TreeView` in the SCM panel and delegates to sub-view `TreeDataProvider`s (one per file). Tree node classes are in `src/views/nodes.ts`.
-- **Configuration**: `src/config.ts` — Reads `gitless.*` settings. `src/constants.ts` has all command/view/context IDs.
+- **Entry point**: `src/extension.ts` - `activate()` creates a `Container` instance.
+- **DI container**: `src/container.ts` - Wires up the `GitService`, commands, views, and configuration.
+- **Git layer**: `src/git/` - `models.ts` (interfaces), `shell.ts` (subprocess execution), `parsers.ts` (output parsing), `remoteUrls.ts` (URL generation), `gitService.ts` (high-level API).
+- **Commands**: `src/commands/registerCommands.ts` - All command handlers registered in one function. Command IDs defined in `src/constants.ts`.
+- **Views**: `src/views/` - `groupedView.ts` owns a single `TreeView` in the SCM panel and delegates to sub-view `TreeDataProvider`s (one per file). Tree node classes are in `src/views/nodes.ts`.
+- **Configuration**: `src/config.ts` - Reads `gitless.*` settings. `src/constants.ts` has all command/view/context IDs.
 
 ## Adding Features
 
@@ -55,10 +55,10 @@ pnpm run test:e2e      # E2E tests (Playwright)
 
 ## Important Files
 
-- `package.json` — Extension manifest. All commands, views, menus, and configuration are declared here.
-- `src/constants.ts` — Single source of truth for command IDs, view IDs, and context value strings.
-- `src/git/parsers.ts` — Git output parsing. Changes here should be accompanied by unit tests in `src/__tests__/parsers.test.ts`.
-- `src/git/remoteUrls.ts` — Remote URL generation for GitHub, GitLab, Bitbucket, Azure DevOps, and Gitea. Tests in `src/__tests__/remoteUrls.test.ts`.
+- `package.json` - Extension manifest. All commands, views, menus, and configuration are declared here.
+- `src/constants.ts` - Single source of truth for command IDs, view IDs, and context value strings.
+- `src/git/parsers.ts` - Git output parsing. Changes here should be accompanied by unit tests in `src/__tests__/parsers.test.ts`.
+- `src/git/remoteUrls.ts` - Remote URL generation for GitHub, GitLab, Bitbucket, Azure DevOps, and Gitea. Tests in `src/__tests__/remoteUrls.test.ts`.
 
 ## Testing Guidelines
 
