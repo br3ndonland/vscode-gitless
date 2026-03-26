@@ -1,0 +1,14 @@
+.github/
+.gitignore
+.node-version
+.prettierignore
+.vscode/
+.vscode-test.mjs
+AGENTS.md
+CONTRIBUTING.md
+pnpm-lock.yaml
+scripts/
+src/
+tests/
+tsconfig.json
+tsconfig.test.json
