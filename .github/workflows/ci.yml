@@ -25,11 +25,10 @@ jobs:
       - name: Lint commits
         run: |
           if ${{ github.event_name == 'pull_request' }}; then
-            pnpm exec commitlint \
-              --from ${{ github.event.pull_request.base.sha }} \
-              --to ${{ github.event.pull_request.head.sha }} \
-              --verbose
+            echo "[INFO] Linting PR title with commitlint"
+            echo ${{ github.event.pull_request.title }} | pnpm exec commitlint --verbose
           else
+            echo "[INFO] Linting last commit with commitlint"
             pnpm exec commitlint --last --verbose
           fi
       - run: pnpm run lint
