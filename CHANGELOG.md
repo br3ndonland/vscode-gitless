@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.1.2](https://github.com/br3ndonland/gitless-vscode/compare/0.1.1...0.1.2) (2026-04-04)
+
+### Bug Fixes
+
+- show dialog for "Copy remote file URL from" ([bb98387](https://github.com/br3ndonland/gitless-vscode/commit/bb98387214c5aa4c3f9a1256eccfeb259a171856))
+
 ## [0.1.1](https://github.com/br3ndonland/gitless-vscode/compare/0.1.0...0.1.1) (2026-04-04)
 
 ### Bug Fixes
